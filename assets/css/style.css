@@ -3,6 +3,7 @@
 
   :root {
     --font-heading: "Sen";sans-serif;
+    --primary-color: #FFB900;
   }
 }
 html {
@@ -52,6 +53,7 @@ a {
 }
 
 .header.fixed {
+  z-index: 1;
   position: sticky;
   top: -28px;
 }
@@ -210,4 +212,84 @@ a {
   font-weight: 700;
   line-height: 1.17; /* 117.241% */
   letter-spacing: -1.16px;
+}
+
+.hero .desc{
+  margin-top: 22px;
+  color: #5F5B53;
+
+font-size: 18px;
+
+
+line-height: 1.67; /* 166.667% */
+
+}
+
+.hero .cta-group{
+  margin-top: 38px;
+  display: flex;
+  align-items: center;
+
+}
+.hero-cta{
+  min-width: 180px;
+line-height: 64px;
+/* background-color: var(--primary-color); */
+background-color:  #FFB900;
+
+}
+
+.hero .watch-video{
+  margin-left: 28px;
+  border: none;
+  
+  /* màu trong suốt */
+  background: transparent;  
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.hero .watch-video .icon{
+  width: 40px;
+height: 40px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 40px;
+background: #FFF;
+box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.07);
+}
+
+.hero .watch-video span{
+  margin-left: 14px;
+  color: #171100;
+
+font-size: 1.8rem;
+
+font-weight: 600;
+line-height: 1.67; /* 166.667% */
+}
+
+.hero .desc-recent{
+margin-top: 48px;
+}
+
+.hero .desc-student strong{
+margin: 15px;
+  color: #171100;
+font-family: var(--font-heading);
+font-size: 4.4rem;
+
+font-weight: 700;
+line-height: 1.23; /* 122.727% */
+}
+
+/* tác động vào thẻ con thứ 2 */
+.hero .desc-student strong:nth-child(2){
+  margin-left: 28px;
+}
+
+.hero .desc-student {
+  margin-top: 8px;
 }
