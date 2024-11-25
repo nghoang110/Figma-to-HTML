@@ -58,6 +58,25 @@ a {
   cursor: pointer;
   opacity: 0.9;
 }
+
+/* tạo dấu 3 chấm trong trường hợp text quá dài */
+.line-clamp{
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp,1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* dấu 3 chấm ở dòng thứ 2 */
+.line-clamp.line-2{
+  --line-clamp: 2;
+}
+
+/* xuống dòng giữ cấu trúc trang */
+.break-all{
+  word-break: break-all;
+}
+
 /* ===========================================header============================================= */
 .header {
   background: #fffcf4;
@@ -368,6 +387,7 @@ color: var(--primary-color);
 }
 
 .popular .course-item{
+  flex: 1;
 border-radius: 12px;
 background: #FFF;
 box-shadow: 0px 18px 36px 0px rgba(0, 0, 0, 0.05);
@@ -448,5 +468,83 @@ background: #171100;
 
 .popular .book-btn:hover{
   background-color: var(--primary-color);
+}
+
+/* ===========================================feedback============================================= */
+
+.feedback {
+  margin-top: 135px;
+  padding: 96px 135px;
+  background: #2E2100;
+}
+
+.feedback .feedback-item{
+  display: flex;
+}
+
+.feedback-item .avatar{
+  width: 72px;
+height: 72px;
+border-radius: 50%;
+
+/* hình không bị méo */
+object-fit: cover;
+
+}
+
+.feedback .info{
+  /* margin-right: 271px; */
+}
+
+.feedback-item .info .member-name{
+  margin-top: 18px;
+  color: #F7F7F7;
+font-family: var(--font-heading);
+font-size: 2.4rem;
+font-weight: 700;
+line-height: 1.42; /* 141.667% */
+}
+
+.feedback-item .info .desc{
+  margin-top: 4px;
+  color: #BFBCB2;
+font-size: 1.4rem;
+line-height: 1.86; /* 185.714% */
+}
+
+.feedback-item .dots{
+
+  gap: 6px;
+  margin-top: 28px;
+  display: flex;
+}
+
+.feedback-item .dot{
+  width: 6px;
+height: 6px;
+border-radius: 50%;
+background: #634700;
+cursor: pointer;
+}
+
+.feedback-item .dot.active{
+  background: var(--primary-color);
+  cursor: default;
+}
+
+.feedback-item .content{
+  /* chiều rộng phần content 770 chia cho rộng main-content 1170 */
+  width: 66%;
+  /* giãn khối bên phải sang kịch trang */
+  margin-left: auto;
+
+}
+
+.feedback-item blockquote {
+color: #FFF;
+font-size: 2.6rem;
+font-style: italic;
+line-height: 1.54; /* 153.846% */
+margin-left: 30px;
 }
 
