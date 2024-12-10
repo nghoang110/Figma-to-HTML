@@ -31,12 +31,10 @@ body {
 a {
   text-decoration: none;
   /* bỏ gạch chân  */
-
-
 }
 .main-content {
   width: 1170px;
-  max-width: calc(100% - 48px);
+  max-width: calc(100% - 48px); 
   margin-left: auto;
   margin-right: auto;
 }
